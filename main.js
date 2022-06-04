@@ -23,11 +23,15 @@ const getNewQuote = async () =>
     //Store the quote present at the randomly generated index
     const quote=allQuotes[indx].text;
 
-    //Store the author of the respective quote
-    const auth=allQuotes[indx].author;
-
+    if (quote.length > 100) {
+        getNewQuote();
+    }
+    else {
     //function to dynamically display the quote and the author
     text.innerHTML=quote;
+    }
+
+    
 }
 getNewQuote();
 
