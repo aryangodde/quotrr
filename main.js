@@ -23,7 +23,7 @@ const getNewQuote = async () =>
     //Store the quote present at the randomly generated index
     const quote=allQuotes[indx].text;
 
-    if (quote.length > 100) {
+    if (quote.length > 60) {
         getNewQuote();
     }
     else {
