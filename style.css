@@ -2,10 +2,10 @@
     margin: 0;
     padding: 0;
 }
-html {
+/* html {
     max-height: 100vh;
     overflow-y: hidden;
-}
+} */
 
 body {
     -webkit-transition: background .4s ease;
@@ -15,10 +15,10 @@ body {
     height:90vh;
     -webkit-box-pack: center;
     -webkit-box-align: center;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
   }
 
   
@@ -123,36 +123,56 @@ body {
     color: #3f3f3f;
   }
 
-  div.main {
-      min-height: 70vh;
-
+  div.quote {
       font-family: 'Inter', sans-serif;
       font-size: 3rem;
       font-weight: 900;
+
+      margin-top: 5rem;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      scrollbar-color: transparent;
+      scrollbar-3dlight-color: none;
+      scrollbar-arrow-color: transparent;
+      scrollbar-base-color: transparent;
   }
 
-  div.main>p {
+  div.quote>p {
       padding: 0 5rem 0 3rem;
+      max-height: 70vh;
+      overflow-y: scroll;
   }
 
   button.generate {
-      background: none;
+      background: #3f3f3f;
       padding: 0.7rem 1.2rem;
-      border: 0.1rem solid #3f3f3f;
       font-size: 1rem;
-      font-weight: 100;
+      font-weight: 400;
       border-radius: 5rem;
-      color: inherit;
+      color: #e8e8e8;
+      margin: 5rem 0;
+
+      border: none;
+
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      bottom: 1rem;
+
+      max-width: fit-content;
   }
 
   button.day {
-      border-color: white;
+      background-color: #e8e8e8;
+      color: #3f3f3f;
   }
+
 
   /* h3 {
       opacity: 75%;
